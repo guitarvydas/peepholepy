@@ -1,7 +1,10 @@
 % rewrite idiom2 {
   Main [x+] = ‛«x»’
 
-  Idiom2 [_v1 _eq1 rest1+ nl _v2 _eq2 rest2+] = ‛«rest1»\n_v = «rest2»’
+  Idiom2 [redundantv+ finalv] = ‛«redundantv»«finalv»’
+  RedundantV [v eq rest+ nl _look] = ‛«rest»«nl»’
+  FinalV_more [v eq rest+ nl] = ‛«v»«eq»«rest»«nl»’
+  FinalV_atend [v eq rest+ eof] = ‛«v»«eq»«rest»’
 
   kw [s] = ‛«s»’
   id [lb s rb] = ‛«lb»«s»«rb»’
