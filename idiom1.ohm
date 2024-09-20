@@ -1,5 +1,10 @@
-optimize {
-  Main = any+
+idiom1 {
+  Main = (Idiom1 | any)+
+
+  Idiom1 = id<"_v"> "=" id<"_v"> "=" (~nl any)+
+
+
+
 
     kw<s> = id<s>
     id<s> = "❲" s "❳"
@@ -10,4 +15,5 @@ optimize {
       | digit+ -- integer
 
    space := " " | "\t"
+   nl = "\n"
 }

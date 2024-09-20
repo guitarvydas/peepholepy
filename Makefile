@@ -4,7 +4,7 @@ D2J=./das2json/mac/das2json
 
 all: peepholepy
 
-peepholepy: peepholepy.drawio py0d.py
+peepholepy: peepholepy.drawio py0d.py *.ohm *.rewrite
 	${D2J} peepholepy.drawio
 	python3 main.py . 0D/python "test.scm" main peepholepy.drawio.json
 

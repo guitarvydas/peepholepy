@@ -1,5 +1,7 @@
-% rewrite optimize {
-  Main [any+] = ‛«any»’
+% rewrite idiom1 {
+  Main [x+] = ‛«x»’
+
+  Idiom1 [_v1 _eq1 _v2 _eq2 rest+] = ‛❲_v❳ = «rest»’
 
   kw [s] = ‛«s»’
   id [lb s rb] = ‛«lb»«s»«rb»’
