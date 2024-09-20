@@ -1,0 +1,3 @@
+% rewrite optimize {
+  main [any+] = ‛«any»’
+}
