@@ -1,0 +1,21 @@
+% rewrite scm2py {
+
+Def [lp1 _define lp2 fname id2 id3 rp2 e rp1] = ‛
+def «fname» («id2», «id3»):⤷
+_v = «e»
+return _v⤶
+’
+
+Expr_rec [lb e rb more?] = ‛«lb»«e»«rb»«more»’
+Expr_let [lb1 _let lb2 lb3 id v rb4 rb2 e? rb1] = ‛«id» = «v»
+_v = «e»’  
+Expr_plus [lp _plus e1 e2 rp more?] = ‛_v = («e1») + («e2»)«more»’
+Expr_atom [a] = ‛«a»’
+
+kw [s] = ‛«s»’
+id [lb s rb] = ‛«s»’
+ident [lb cs+ rb] = ‛«lb»«cs»«rb»’
+idchar [c] = ‛«c»’
+atom_ident [id] = ‛«id»’
+atom_integer [digits+] = ‛«digits»’
+}
