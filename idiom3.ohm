@@ -1,0 +1,21 @@
+idiom2 {
+  Main = (Idiom2 | any)+
+
+  Idiom2 =  RedundantV+ FinalV
+  RedundantV = id<"_v"> "=" (~nl any)+ nl &id<"_v">
+  FinalV = 
+    | id<"_v"> "=" (~nl any)+ nl ~id<"_v"> -- more
+    | id<"_v"> "=" (~nl any)+ end          -- atend
+
+
+    kw<s> = id<s>
+    id<s> = "❲" s "❳"
+    ident = "❲" idchar+ "❳"
+    idchar = ~"❲" ~"❳" any
+    atom =
+      | ident -- ident
+      | digit+ -- integer
+
+   space := " " | "\t"
+   nl = "\n"
+}
