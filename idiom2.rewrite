@@ -3,8 +3,7 @@
 
   Idiom2 [redundantv+ finalv] = ‛«redundantv»«finalv»’
   RedundantV [v eq rest+ nl _look] = ‛«rest»«nl»’
-  FinalV_more [v eq rest+ nl] = ‛«v»«eq»«rest»«nl»’
-  FinalV_atend [v eq rest+ eof] = ‛«v»«eq»«rest»’
+  FinalV [v eq rest+ nl] = ‛«v»«eq»«rest»«nl»’
 
   kw [s] = ‛«s»’
   id [lb s rb] = ‛«lb»«s»«rb»’

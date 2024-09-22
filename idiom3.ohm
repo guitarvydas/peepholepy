@@ -1,11 +1,7 @@
-idiom2 {
-  Main = (Idiom2 | any)+
+idiom3 {
+  Main = (Idiom3 | any)+
 
-  Idiom2 =  RedundantV+ FinalV
-  RedundantV = id<"_v"> "=" (~nl any)+ nl &id<"_v">
-  FinalV = 
-    | id<"_v"> "=" (~nl any)+ nl ~id<"_v"> -- more
-    | id<"_v"> "=" (~nl any)+ end          -- atend
+  Idiom3 =  id<"_v"> "=" (~nl any)+ nl kw<"return"> id<"_v">
 
 
     kw<s> = id<s>

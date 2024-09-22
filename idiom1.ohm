@@ -11,7 +11,7 @@ idiom1 {
     ident = "❲" idchar+ "❳"
     idchar = ~"❲" ~"❳" any
     atom =
-      | ident -- ident
+      | ident -- ident	
       | digit+ -- integer
 
    space := " " | "\t"

@@ -3,7 +3,7 @@
 Def [lp1 _define lp2 fname id2 id3 rp2 e rp1] = ‛
 ❲def❳ «fname» («id2», «id3»):⤷
 ❲_v❳ = «e»
-return ❲_v❳⤶
+❲return❳ ❲_v❳⤶
 ’
 
 Expr_rec [lb e rb more?] = ‛«lb»«e»«rb»«more»’

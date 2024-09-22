@@ -4,10 +4,6 @@
         "name": "main",
         "children": [
             {
-                "name": "?A",
-                "id": 3
-            },
-            {
                 "name": "Inhale",
                 "id": 6
             },
@@ -16,12 +12,12 @@
                 "id": 11
             },
             {
-                "name": "Exhale Python",
-                "id": 17
+                "name": "Optimize",
+                "id": 16
             },
             {
-                "name": "Optimize",
-                "id": 21
+                "name": "Exhale Python",
+                "id": 17
             }
         ],
         "connections": [
@@ -41,19 +37,6 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Scheme to Python",
-                    "id": 11
-                },
-                "source_port": "",
-                "target": {
-                    "name": "?A",
-                    "id": 3
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "Inhale",
                     "id": 6
                 },
@@ -73,7 +56,7 @@
                 "source_port": "",
                 "target": {
                     "name": "Optimize",
-                    "id": 21
+                    "id": 16
                 },
                 "target_port": ""
             },
@@ -81,7 +64,7 @@
                 "dir": 1,
                 "source": {
                     "name": "Optimize",
-                    "id": 21
+                    "id": 16
                 },
                 "source_port": "",
                 "target": {
@@ -89,6 +72,32 @@
                     "id": 17
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Exhale Python",
+                    "id": 17
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Exhale Python",
+                    "id": 17
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
             },
             {
                 "dir": 2,
@@ -102,32 +111,6 @@
                     "id": 0
                 },
                 "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Exhale Python",
-                    "id": 17
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Exhale Python",
-                    "id": 17
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
             },
             {
                 "dir": 2,
@@ -153,8 +136,20 @@
                 "id": 5
             },
             {
+                "name": "?",
+                "id": 10
+            },
+            {
                 "name": "Read Text File",
                 "id": 11
+            },
+            {
+                "name": "?",
+                "id": 16
+            },
+            {
+                "name": "?",
+                "id": 17
             }
         ],
         "connections": [
@@ -172,6 +167,32 @@
                 "target_port": ""
             },
             {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?",
+                    "id": 16
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Read Text File",
+                    "id": 11
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?",
+                    "id": 17
+                },
+                "target_port": ""
+            },
+            {
                 "dir": 1,
                 "source": {
                     "name": "Read Text File",
@@ -181,6 +202,19 @@
                 "target": {
                     "name": "$ node t2t.mjs internalize.ohm internalize.rewrite -",
                     "id": 5
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "$ node t2t.mjs internalize.ohm internalize.rewrite -",
+                    "id": 5
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?",
+                    "id": 10
                 },
                 "target_port": ""
             },
@@ -532,10 +566,6 @@
         "name": "Optimize",
         "children": [
             {
-                "name": "$ node t2t.mjs idiom2.ohm idiom2.rewrite -",
-                "id": 3
-            },
-            {
                 "name": "$ node t2t.mjs idiom1.ohm idiom1.rewrite -",
                 "id": 4
             },
@@ -548,11 +578,36 @@
                 "id": 11
             },
             {
-                "name": "?B",
+                "name": "?",
+                "id": 16
+            },
+            {
+                "name": "?A",
                 "id": 18
+            },
+            {
+                "name": "?B",
+                "id": 20
+            },
+            {
+                "name": "$ node t2t.mjs idiom2.ohm idiom2.rewrite -",
+                "id": 21
             }
         ],
         "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?",
+                    "id": 16
+                },
+                "target_port": ""
+            },
             {
                 "dir": 0,
                 "source": {
@@ -569,12 +624,25 @@
             {
                 "dir": 1,
                 "source": {
+                    "name": "$ node t2t.mjs idiom2.ohm idiom2.rewrite -",
+                    "id": 21
+                },
+                "source_port": "",
+                "target": {
+                    "name": "$ node t2t.mjs idiom3.ohm idiom3.rewrite -",
+                    "id": 11
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
                     "name": "$ node t2t.mjs idiom1.ohm idiom1.rewrite -",
                     "id": 4
                 },
                 "source_port": "",
                 "target": {
-                    "name": "?B",
+                    "name": "?A",
                     "id": 18
                 },
                 "target_port": ""
@@ -588,7 +656,7 @@
                 "source_port": "",
                 "target": {
                     "name": "$ node t2t.mjs idiom2.ohm idiom2.rewrite -",
-                    "id": 3
+                    "id": 21
                 },
                 "target_port": ""
             },
@@ -596,20 +664,20 @@
                 "dir": 1,
                 "source": {
                     "name": "$ node t2t.mjs idiom2.ohm idiom2.rewrite -",
-                    "id": 3
+                    "id": 21
                 },
                 "source_port": "",
                 "target": {
-                    "name": "$ node t2t.mjs idiom3.ohm idiom3.rewrite -",
-                    "id": 11
+                    "name": "?B",
+                    "id": 20
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "$ node t2t.mjs idiom2.ohm idiom2.rewrite -",
-                    "id": 3
+                    "name": "$ node t2t.mjs idiom3.ohm idiom3.rewrite -",
+                    "id": 11
                 },
                 "source_port": "",
                 "target": {
@@ -621,6 +689,32 @@
             {
                 "dir": 2,
                 "source": {
+                    "name": "$ node t2t.mjs idiom2.ohm idiom2.rewrite -",
+                    "id": 21
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "$ node t2t.mjs idiom3.ohm idiom3.rewrite -",
+                    "id": 11
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
                     "name": "$ node t2t.mjs idiom3.ohm idiom3.rewrite -",
                     "id": 11
                 },
@@ -630,32 +724,6 @@
                     "id": 0
                 },
                 "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "$ node t2t.mjs idiom3.ohm idiom3.rewrite -",
-                    "id": 11
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "$ node t2t.mjs idiom2.ohm idiom2.rewrite -",
-                    "id": 3
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
             },
             {
                 "dir": 2,
